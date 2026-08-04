@@ -93,7 +93,7 @@ export const Hero: React.FC<HeroProps> = () => {
           >
             <div className={styles.imageFrame}>
               <img
-                src="/public/images/profile1.jpg"
+                src="/images/profile1.jpg"
                 alt="Dina Muravska - Full-Stack Developer"
                 className={styles.profileImg}
                 referrerPolicy="no-referrer"

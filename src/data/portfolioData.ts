@@ -70,7 +70,7 @@ export const projectsData: Project[] = [
     githubBackendUrl: "https://github.com/dina-muravska/tasteorama-back",
     category: "fullstack",
     featured: true,
-    image: "/public/images/projects/tasteorama.jpg",
+    image: "/images/projects/tasteorama.jpg",
     imageBg:
       "linear-gradient(135deg, rgba(193, 18, 31, 0.2) 0%, rgba(15, 15, 15, 0.95) 100%)",
   },
@@ -102,7 +102,7 @@ export const projectsData: Project[] = [
     githubFrontendUrl: "https://github.com/dina-muravska/travel-trucks",
     category: "frontend",
     featured: true,
-    image: "/public/images/projects/travel-trucks.jpg",
+    image: "/images/projects/travel-trucks.jpg",
     imageBg:
       "linear-gradient(135deg, rgba(193, 18, 31, 0.15) 0%, rgba(15, 15, 15, 0.95) 100%)",
   },
@@ -135,7 +135,7 @@ export const projectsData: Project[] = [
     githubFrontendUrl: "https://github.com/dina-muravska/NoteHub",
     category: "fullstack",
     featured: true,
-    image: "/public/images/projects/notehub.jpg",
+    image: "/images/projects/notehub.jpg",
     imageBg:
       "linear-gradient(135deg, rgba(193, 18, 31, 0.18) 0%, rgba(15, 15, 15, 0.95) 100%)",
   },
@@ -158,7 +158,7 @@ export const projectsData: Project[] = [
     githubFrontendUrl: "https://github.com/dina-muravska/coffee-vibes",
     category: "landing",
     featured: false,
-    image: "/public/images/projects/coffeevibes.jpg",
+    image: "/images/projects/coffeevibes.jpg",
     imageBg:
       "linear-gradient(135deg, rgba(193, 18, 31, 0.12) 0%, rgba(15, 15, 15, 0.95) 100%)",
   },
@@ -193,7 +193,7 @@ export const projectsData: Project[] = [
     githubFrontendUrl: "https://github.com/dina-muravska/Artists-project",
     category: "frontend",
     featured: false,
-    image: "/public/images/projects/artistshub.jpg",
+    image: "/images/projects/artistshub.jpg",
     imageBg:
       "linear-gradient(135deg, rgba(193, 18, 31, 0.14) 0%, rgba(15, 15, 15, 0.95) 100%)",
   },
