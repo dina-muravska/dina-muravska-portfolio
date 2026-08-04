@@ -1,0 +1,82 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: $bg-card;
+  border: 1px solid $border-dark;
+  padding: 1.75rem;
+  border-radius: $radius-lg;
+  transition: all $transition-base;
+  display: flex;
+  flex-direction: column;
+  box-shadow: $shadow-card;
+
+  &:hover {
+    border-color: rgba(217, 4, 41, 0.4);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+    transform: translateY(-3px);
+
+    .badgeTag {
+      background: rgba(217, 4, 41, 0.18);
+      border-color: $accent-primary;
+    }
+  }
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.icon {
+  color: $accent-hover;
+  display: flex;
+  align-items: center;
+}
+
+.badgeTag {
+  font-family: $font-mono;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  background: $accent-muted;
+  border: 1px solid rgba(217, 4, 41, 0.3);
+  color: $accent-hover;
+  border-radius: $radius-full;
+  transition: all $transition-fast;
+}
+
+.title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: $text-primary;
+  margin-bottom: 0.5rem;
+}
+
+.issuer {
+  font-size: 0.875rem;
+  color: $accent-hover;
+  font-family: $font-mono;
+  margin-bottom: 1rem;
+}
+
+.date {
+  font-family: $font-mono;
+  font-size: 0.8rem;
+  color: $text-muted;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}

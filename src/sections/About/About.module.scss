@@ -1,0 +1,161 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2.5rem;
+  align-items: start;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.leftContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.textCard {
+  background: $bg-card;
+  border: 1px solid $border-dark;
+  padding: 2rem;
+  border-radius: $radius-lg;
+  line-height: 1.75;
+  color: $text-secondary;
+  font-size: 1.025rem;
+  box-shadow: $shadow-card;
+
+  p {
+    margin-bottom: 1.25rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .highlight {
+    color: $text-primary;
+    font-weight: 700;
+  }
+}
+
+.rightContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.infoCard {
+  background: $bg-card;
+  border: 1px solid $border-dark;
+  padding: 1.75rem;
+  border-radius: $radius-lg;
+  transition: all $transition-fast;
+  box-shadow: $shadow-card;
+
+  &:hover {
+    border-color: rgba(217, 4, 41, 0.4);
+  }
+
+  .cardTitle {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: $accent-hover;
+    font-family: $font-mono;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+.languagesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.langItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.65rem 1rem;
+  background: #f1f5f9;
+  border: 1px solid $border-dark;
+  border-radius: $radius-md;
+
+  .langName {
+    font-weight: 600;
+    color: $text-primary;
+  }
+
+  .langLevel {
+    font-family: $font-mono;
+    font-size: 0.8rem;
+    color: $accent-hover;
+    background: $accent-muted;
+    padding: 0.2rem 0.6rem;
+    border-radius: $radius-full;
+  }
+}
+
+.softSkillsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.softSkillTag {
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.45rem 0.85rem;
+  background: #f1f5f9;
+  border: 1px solid $border-dark;
+  border-radius: $radius-md;
+  color: $text-primary;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all $transition-fast;
+
+  &:hover {
+    border-color: $accent-primary;
+    color: $accent-dark;
+    background: rgba(217, 4, 41, 0.12);
+  }
+
+  .bullet {
+    color: $accent-primary;
+  }
+}
+
+.quickDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.detailRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+
+  .label {
+    font-family: $font-mono;
+    font-size: 0.825rem;
+    color: $text-muted;
+    min-width: 100px;
+  }
+
+  .value {
+    font-size: 0.9rem;
+    color: $text-primary;
+    font-weight: 500;
+  }
+}

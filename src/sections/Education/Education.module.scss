@@ -1,0 +1,79 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: $bg-card;
+  border: 1px solid $border-dark;
+  padding: 2.25rem;
+  border-radius: $radius-lg;
+  display: flex;
+  flex-direction: column;
+  transition: all $transition-base;
+  position: relative;
+  overflow: hidden;
+  box-shadow: $shadow-card;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: $accent-primary;
+  }
+
+  &:hover {
+    border-color: rgba(217, 4, 41, 0.4);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+    transform: translateY(-3px);
+  }
+}
+
+.iconWrapper {
+  width: 46px;
+  height: 46px;
+  border-radius: $radius-md;
+  background: $accent-muted;
+  border: 1px solid rgba(217, 4, 41, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $accent-hover;
+  margin-bottom: 1.25rem;
+}
+
+.institution {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: $text-primary;
+  margin-bottom: 0.35rem;
+}
+
+.degree {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: $accent-hover;
+  font-family: $font-mono;
+  margin-bottom: 1.25rem;
+}
+
+.period {
+  font-family: $font-mono;
+  font-size: 0.825rem;
+  color: $text-muted;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}

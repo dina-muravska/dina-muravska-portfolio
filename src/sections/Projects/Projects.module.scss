@@ -1,0 +1,254 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.filterTabs {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  font-family: $font-mono;
+  font-size: 0.85rem;
+  padding: 0.55rem 1.25rem;
+  background: $bg-card;
+  border: 1px solid $border-dark;
+  border-radius: $radius-md;
+  color: $text-secondary;
+  transition: all $transition-fast;
+
+  &:hover {
+    color: $text-primary;
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &.active {
+    background: $accent-primary;
+    border-color: $accent-primary;
+    color: #ffffff;
+    font-weight: 600;
+  }
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.projectCard {
+  background: $bg-card;
+  border: 1px solid $border-dark;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all $transition-base;
+  position: relative;
+  box-shadow: $shadow-card;
+
+  &:hover {
+    border-color: rgba(217, 4, 41, 0.5);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1), $glow-sm;
+    transform: translateY(-4px);
+
+    .projectImage {
+      transform: scale(1.04);
+    }
+  }
+}
+
+.imageContainer {
+  width: 100%;
+  height: 210px;
+  position: relative;
+  overflow: hidden;
+  background: #e2e8f0;
+  border-bottom: 1px solid $border-dark;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform $transition-slow;
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(180deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 50%, rgba(241,243,247,0.85) 100%);
+  pointer-events: none;
+}
+
+.topBadges {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.categoryBadge {
+  font-family: $font-mono;
+  font-size: 0.725rem;
+  padding: 0.2rem 0.6rem;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid $border-dark;
+  border-radius: $radius-sm;
+  color: $text-secondary;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.05);
+}
+
+.featuredBadge {
+  font-family: $font-mono;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  background: $accent-primary;
+  color: #ffffff;
+  border-radius: $radius-sm;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.cardBody {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.projectTitle {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: $text-primary;
+}
+
+.year {
+  font-family: $font-mono;
+  font-size: 0.8rem;
+  color: $text-muted;
+}
+
+.roleSub {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: $accent-hover;
+  font-family: $font-mono;
+  margin-bottom: 0.75rem;
+}
+
+.description {
+  font-size: 0.925rem;
+  color: $text-secondary;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.techPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.techPill {
+  font-family: $font-mono;
+  font-size: 0.725rem;
+  padding: 0.2rem 0.55rem;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: $radius-sm;
+  color: $text-secondary;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid $border-dark;
+  flex-wrap: wrap;
+}
+
+.actionButtons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.liveBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.85rem;
+  background: $accent-primary;
+  color: #ffffff;
+  font-family: $font-mono;
+  font-size: 0.775rem;
+  font-weight: 600;
+  border-radius: $radius-sm;
+  transition: all $transition-fast;
+
+  &:hover {
+    background: $accent-hover;
+  }
+}
+
+.githubBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.85rem;
+  background: #f1f5f9;
+  border: 1px solid $border-dark;
+  color: $text-primary;
+  font-family: $font-mono;
+  font-size: 0.775rem;
+  font-weight: 600;
+  border-radius: $radius-sm;
+  transition: all $transition-fast;
+
+  &:hover {
+    border-color: rgba(217, 4, 41, 0.4);
+    background: #e2e8f0;
+    color: $accent-dark;
+  }
+}
+
+.detailsBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: $font-mono;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: $text-secondary;
+  transition: all $transition-fast;
+
+  &:hover {
+    color: $accent-hover;
+    gap: 0.5rem;
+  }
+}

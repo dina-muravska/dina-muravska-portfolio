@@ -1,0 +1,165 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 1.5rem;
+    width: 2px;
+    background: $border-dark;
+
+    @include mobile {
+      left: 0.75rem;
+    }
+  }
+}
+
+.item {
+  position: relative;
+  padding-left: 3.5rem;
+
+  @include mobile {
+    padding-left: 2.25rem;
+  }
+}
+
+.marker {
+  position: absolute;
+  top: 1.25rem;
+  left: 0.85rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: $bg-primary;
+  border: 2px solid $accent-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+
+  @include mobile {
+    left: 0.75rem;
+  }
+
+  &::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: $accent-primary;
+  }
+}
+
+.card {
+  background: $bg-card;
+  border: 1px solid $border-dark;
+  padding: 2rem;
+  border-radius: $radius-lg;
+  transition: all $transition-base;
+  box-shadow: $shadow-card;
+
+  &:hover {
+    border-color: rgba(217, 4, 41, 0.4);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  }
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.company {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: $text-primary;
+}
+
+.position {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: $accent-hover;
+  font-family: $font-mono;
+}
+
+.period {
+  font-family: $font-mono;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.75rem;
+  background: $accent-muted;
+  border: 1px solid rgba(217, 4, 41, 0.3);
+  color: $accent-hover;
+  border-radius: $radius-full;
+}
+
+.responsibilities {
+  margin-bottom: 1.5rem;
+
+  h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: $text-secondary;
+    font-family: $font-mono;
+    margin-bottom: 0.75rem;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      font-size: 0.95rem;
+      color: $text-secondary;
+      line-height: 1.6;
+
+      .icon {
+        color: $accent-primary;
+        margin-top: 0.25rem;
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+.achievements {
+  padding: 1.25rem;
+  background: #f1f5f9;
+  border: 1px dashed $border-dark;
+  border-radius: $radius-md;
+
+  .achTitle {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: $accent-hover;
+    font-family: $font-mono;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  p {
+    font-size: 0.925rem;
+    color: $text-primary;
+    line-height: 1.5;
+  }
+}

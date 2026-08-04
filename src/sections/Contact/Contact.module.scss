@@ -1,0 +1,183 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 2.5rem;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.infoCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contactCard {
+  background: $bg-card;
+  border: 1px solid $border-dark;
+  padding: 1.25rem 1.5rem;
+  border-radius: $radius-lg;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all $transition-base;
+  box-shadow: $shadow-card;
+
+  &:hover {
+    border-color: rgba(217, 4, 41, 0.4);
+    transform: translateX(4px);
+  }
+}
+
+.cardLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.iconBox {
+  width: 42px;
+  height: 42px;
+  border-radius: $radius-md;
+  background: $accent-muted;
+  border: 1px solid rgba(217, 4, 41, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $accent-hover;
+  flex-shrink: 0;
+}
+
+.label {
+  font-family: $font-mono;
+  font-size: 0.725rem;
+  color: $text-muted;
+  text-transform: uppercase;
+  margin-bottom: 0.15rem;
+}
+
+.value {
+  font-size: 0.925rem;
+  font-weight: 600;
+  color: $text-primary;
+}
+
+.copyBtn {
+  color: $text-muted;
+  padding: 0.5rem;
+  border-radius: $radius-sm;
+  transition: all $transition-fast;
+
+  &:hover {
+    color: $accent-hover;
+    background: $accent-muted;
+  }
+}
+
+.formCard {
+  background: $bg-card;
+  border: 1px solid $border-dark;
+  padding: 2.25rem;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+
+  @include mobile {
+    padding: 1.5rem;
+  }
+}
+
+.formTitle {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: $text-primary;
+  margin-bottom: 0.35rem;
+}
+
+.formSub {
+  font-size: 0.9rem;
+  color: $text-secondary;
+  margin-bottom: 1.5rem;
+}
+
+.formGroup {
+  margin-bottom: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  label {
+    font-family: $font-mono;
+    font-size: 0.8rem;
+    color: $text-secondary;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 0.8rem 0.95rem;
+    background: #f8fafc;
+    border: 1px solid $border-dark;
+    border-radius: $radius-md;
+    color: $text-primary;
+    font-family: $font-main;
+    font-size: 0.925rem;
+    transition: all $transition-fast;
+
+    &:focus {
+      outline: none;
+      border-color: $accent-primary;
+      box-shadow: 0 0 10px rgba(217, 4, 41, 0.15);
+      background: #ffffff;
+    }
+
+    &::placeholder {
+      color: $text-muted;
+    }
+  }
+
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+}
+
+.submitBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem;
+  background: $accent-primary;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: $radius-md;
+  box-shadow: $glow-sm;
+  transition: all $transition-base;
+  margin-top: 0.5rem;
+
+  &:hover {
+    background: $accent-hover;
+    transform: translateY(-2px);
+    box-shadow: $glow-md;
+  }
+}
+
+.successNotice {
+  padding: 0.85rem 1rem;
+  background: $accent-muted;
+  border: 1px solid rgba(217, 4, 41, 0.3);
+  border-radius: $radius-md;
+  color: $accent-hover;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}

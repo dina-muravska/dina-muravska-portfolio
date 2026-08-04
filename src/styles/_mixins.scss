@@ -1,0 +1,60 @@
+@import 'variables';
+
+// Responsive Mixins
+@mixin mobile {
+  @media (max-width: 639px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin wide {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+// Clean Card Mixin
+@mixin card-panel($border-color: $border-dark) {
+  background: $bg-card;
+  border: 1px solid $border-color;
+  box-shadow: $shadow-card;
+}
+
+// Clean Glass Overlay Mixin
+@mixin glass-panel($border-color: $border-dark) {
+  background: $bg-card;
+  border: 1px solid $border-color;
+  box-shadow: $shadow-card;
+}
+
+// Flex Center Helpers
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Accent Text Gradient Mixin (Shades of Red)
+@mixin text-accent-gradient {
+  background: linear-gradient(135deg, #780016 0%, #d90429 50%, #ef233c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
