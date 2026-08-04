@@ -1,39 +1,46 @@
 // Color palette (Light Gray & Multi-Tone Red Portfolio)
-$bg-primary: #f1f3f7;
-$bg-secondary: #e4e8f0;
-$bg-card: #ffffff;
-$bg-card-hover: #f8fafc;
-$bg-glass: rgba(255, 255, 255, 0.92);
+$bg-primary: var(--bg-primary);
+$bg-secondary: var(--bg-secondary);
+$bg-card: var(--bg-card);
+$bg-card-hover: var(--bg-card-hover);
+$bg-glass: var(--bg-glass);
 
 // Shades of Red
-$accent-deep-red: #800f2f;
-$accent-dark: #a01a2e;
-$accent-primary: #d90429;
-$accent-hover: #ef233c;
-$accent-light-red: #ff4d6d;
-$accent-soft-red: #ffccd5;
-$accent-muted: rgba(217, 4, 41, 0.08);
-$accent-border: rgba(217, 4, 41, 0.25);
+$accent-deep-red: var(--accent-deep-red);
+$accent-dark: var(--accent-dark);
+$accent-primary: var(--accent-primary);
+$accent-hover: var(--accent-hover);
+$accent-light-red: var(--accent-light-red);
+$accent-soft-red: var(--accent-soft-red);
+$accent-muted: var(--accent-muted);
+$accent-border: var(--accent-border);
 
 // Typography & Text (Shades of Slate Gray)
-$text-primary: #0f172a;
-$text-secondary: #475569;
-$text-muted: #64748b;
+$text-primary: var(--text-primary);
+$text-secondary: var(--text-secondary);
+$text-muted: var(--text-muted);
 
 // Borders (Shades of Gray)
-$border-dark: #e2e8f0;
-$border-light: #cbd5e1;
-$border-accent: #d90429;
+$border-dark: var(--border-dark);
+$border-light: var(--border-light);
+$border-accent: var(--border-accent);
 
 // Legacy alias mappings for backwards compatibility
-$neon-green: #d90429;
-$neon-green-light: #ef233c;
-$neon-green-dark: #800f2f;
-$neon-green-muted: rgba(217, 4, 41, 0.08);
+$neon-green: var(--accent-primary);
+$neon-green-light: var(--accent-hover);
+$neon-green-dark: var(--accent-deep-red);
+$neon-green-muted: var(--accent-muted);
 
 // Typography
-$font-main: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-$font-mono: 'JetBrains Mono', 'Fira Code', 'Roboto Mono', monospace;
+$font-main:
+  "Plus Jakarta Sans",
+  system-ui,
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Roboto,
+  sans-serif;
+$font-mono: "JetBrains Mono", "Fira Code", "Roboto Mono", monospace;
 
 // Radii
 $radius-sm: 6px;
@@ -48,8 +55,7 @@ $transition-base: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 $transition-slow: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 
 // Shadows & Subtle accents
-$glow-sm: 0 4px 18px rgba(217, 4, 41, 0.18);
-$glow-md: 0 6px 28px rgba(217, 4, 41, 0.28);
-$glow-lg: 0 10px 38px rgba(217, 4, 41, 0.38);
-$shadow-card: 0 6px 20px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.04);
-
+$glow-sm: var(--glow-sm);
+$glow-md: var(--glow-md);
+$glow-lg: var(--glow-lg);
+$shadow-card: var(--shadow-card);

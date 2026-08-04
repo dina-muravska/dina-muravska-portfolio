@@ -1,27 +1,31 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, FileText, ArrowUpRight } from 'lucide-react';
-import { useScrollProgress } from '../../hooks/useScrollProgress';
-import { scrollToSection } from '../../utils/formatters';
-import styles from './Navbar.module.scss';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { Menu, X, Moon, Sun } from "lucide-react";
+import { useScrollProgress } from "../../hooks/useScrollProgress";
+import { scrollToSection } from "../../utils/formatters";
+import styles from "./Navbar.module.scss";
 
 interface NavbarProps {
   activeSection: string;
-  onOpenCvModal: () => void;
+  theme: "light" | "dark";
+  onToggleTheme: () => void;
 }
 
 const navItems = [
-  { id: 'hero', label: 'Home' },
-  { id: 'projects', label: 'Projects' },
-  { id: 'about', label: 'About' },
-  { id: 'skills', label: 'Skills' },
-  { id: 'experience', label: 'Experience' },
-  { id: 'education', label: 'Education' },
-  { id: 'certifications', label: 'Certifications' },
-  { id: 'contact', label: 'Contact' },
+  { id: "hero", label: "Home" },
+  { id: "projects", label: "Projects" },
+  { id: "about", label: "About" },
+  { id: "skills", label: "Skills" },
+  { id: "education", label: "Education" },
+  { id: "certifications", label: "Certifications" },
+  { id: "contact", label: "Contact" },
 ];
 
-export const Navbar: React.FC<NavbarProps> = ({ activeSection, onOpenCvModal }) => {
+export const Navbar: React.FC<NavbarProps> = ({
+  activeSection,
+  theme,
+  onToggleTheme,
+}) => {
   const { isScrolled } = useScrollProgress();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -32,10 +36,21 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onOpenCvModal }) 
 
   return (
     <>
-      <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
+      <header
+        className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}
+      >
         <div className={`container ${styles.navContainer}`}>
-          <a href="#hero" onClick={(e) => { e.preventDefault(); handleNavClick('hero'); }} className={styles.logo}>
-            <span>Dina<span className={styles.accent}>.dev</span></span>
+          <a
+            href="#hero"
+            onClick={(e) => {
+              e.preventDefault();
+              handleNavClick("hero");
+            }}
+            className={styles.logo}
+          >
+            <span>
+              Dina<span className={styles.accent}>.dev</span>
+            </span>
             <span className={styles.badge}>
               <span className={styles.dot}></span>
               Available
@@ -52,7 +67,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onOpenCvModal }) 
                   e.preventDefault();
                   handleNavClick(item.id);
                 }}
-                className={`${styles.navLink} ${activeSection === item.id ? styles.active : ''}`}
+                className={`${styles.navLink} ${activeSection === item.id ? styles.active : ""}`}
               >
                 {item.label}
               </a>
@@ -60,10 +75,12 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onOpenCvModal }) 
           </nav>
 
           <div className={styles.actions}>
-            <button className={styles.cvButton} onClick={onOpenCvModal}>
-              <FileText size={15} />
-              <span>Resume</span>
-              <ArrowUpRight size={13} />
+            <button
+              className={styles.themeToggle}
+              onClick={onToggleTheme}
+              aria-label={`Switch to ${theme === "light" ? "dark" : "light"} theme`}
+            >
+              {theme === "light" ? <Moon size={16} /> : <Sun size={16} />}
             </button>
 
             <button
@@ -96,22 +113,11 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onOpenCvModal }) 
                     e.preventDefault();
                     handleNavClick(item.id);
                   }}
-                  className={`${styles.mobileNavLink} ${activeSection === item.id ? styles.active : ''}`}
+                  className={`${styles.mobileNavLink} ${activeSection === item.id ? styles.active : ""}`}
                 >
                   {item.label}
                 </a>
               ))}
-
-              <button
-                className={styles.mobileCvButton}
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenCvModal();
-                }}
-              >
-                <FileText size={18} />
-                <span>View CV / Resume</span>
-              </button>
             </nav>
           </motion.div>
         )}

@@ -1,0 +1,78 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+@media (max-width: 639px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-dark);
+  padding: 1.75rem;
+  border-radius: 14px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-card);
+}
+.card:hover {
+  border-color: rgba(217, 4, 41, 0.4);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  transform: translateY(-3px);
+}
+.card:hover .badgeTag {
+  background: rgba(217, 4, 41, 0.18);
+  border-color: var(--accent-primary);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.icon {
+  color: var(--accent-hover);
+  display: flex;
+  align-items: center;
+}
+
+.badgeTag {
+  font-family: "JetBrains Mono", "Fira Code", "Roboto Mono", monospace;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  background: var(--accent-muted);
+  border: 1px solid rgba(217, 4, 41, 0.3);
+  color: var(--accent-hover);
+  border-radius: 9999px;
+  transition: all 0.15s ease;
+}
+
+.title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.issuer {
+  font-size: 0.875rem;
+  color: var(--accent-hover);
+  font-family: "JetBrains Mono", "Fira Code", "Roboto Mono", monospace;
+  margin-bottom: 1rem;
+}
+
+.date {
+  font-family: "JetBrains Mono", "Fira Code", "Roboto Mono", monospace;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}/*# sourceMappingURL=Certifications.module.css.map */

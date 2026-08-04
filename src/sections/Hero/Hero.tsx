@@ -1,24 +1,15 @@
 import React from "react";
 import { motion } from "motion/react";
-import {
-  ArrowDown,
-  Github,
-  Linkedin,
-  Send,
-  Mail,
-  Code2,
-  FileText,
-} from "lucide-react";
+import { ArrowDown, Github, Linkedin, Send, Mail, Code2 } from "lucide-react";
 import { personalDetails, contactInfo } from "../../data/portfolioData";
 import { scrollToSection } from "../../utils/formatters";
 import styles from "./Hero.module.scss";
 
 interface HeroProps {
   onCopyNotice: (msg: string) => void;
-  onOpenCvModal: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
+export const Hero: React.FC<HeroProps> = () => {
   return (
     <section id="hero" className={styles.hero}>
       <div className="container">
@@ -61,15 +52,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
               >
                 <span>Get In Touch</span>
                 <ArrowDown size={16} />
-              </button>
-
-              <button
-                className={styles.outlineBtn}
-                onClick={onOpenCvModal}
-                title="View CV Resume"
-              >
-                <FileText size={16} />
-                <span>CV Resume</span>
               </button>
             </div>
 
@@ -116,7 +98,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
           >
             <div className={styles.imageFrame}>
               <img
-                src="/images/profile.jpg"
+                src="/public/images/profile1.jpg"
                 alt="Dina Muravska - Full-Stack Developer"
                 className={styles.profileImg}
                 referrerPolicy="no-referrer"

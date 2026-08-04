@@ -1,0 +1,126 @@
+.footer {
+  background: #e4e8f0;
+  border-top: 1px solid var(--border-dark);
+  padding: 4rem 0 2rem 0;
+  position: relative;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.brand {
+  max-width: 320px;
+}
+.brand .logo {
+  font-family: "JetBrains Mono", "Fira Code", "Roboto Mono", monospace;
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+.brand .logo .accent {
+  color: var(--accent-primary);
+}
+.brand .tagline {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.linksGroup {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+@media (max-width: 639px) {
+  .linksGroup {
+    gap: 2rem;
+  }
+}
+
+.linkCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.linkCol .title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-hover);
+  font-family: "JetBrains Mono", "Fira Code", "Roboto Mono", monospace;
+  margin-bottom: 0.25rem;
+}
+.linkCol a {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  transition: color 0.15s ease;
+}
+.linkCol a:hover {
+  color: var(--text-primary);
+}
+
+.socialRow {
+  display: flex;
+  gap: 0.65rem;
+}
+.socialRow a {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: all 0.15s ease;
+}
+.socialRow a:hover {
+  color: var(--accent-dark);
+  border-color: var(--accent-primary);
+  background: rgba(217, 4, 41, 0.12);
+  transform: translateY(-2px);
+}
+
+.bottomRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-dark);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+@media (max-width: 639px) {
+  .bottomRow {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+.backToTop {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: "JetBrains Mono", "Fira Code", "Roboto Mono", monospace;
+  font-size: 0.8rem;
+  color: var(--accent-hover);
+  background: var(--accent-muted);
+  border: 1px solid rgba(217, 4, 41, 0.3);
+  padding: 0.45rem 0.95rem;
+  border-radius: 9999px;
+  transition: all 0.15s ease;
+}
+.backToTop:hover {
+  background: rgba(217, 4, 41, 0.18);
+  transform: translateY(-2px);
+}/*# sourceMappingURL=Footer.module.css.map */

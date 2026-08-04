@@ -1,0 +1,127 @@
+.contactShell {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.contactHero {
+  background: linear-gradient(135deg, rgba(217, 4, 41, 0.08), rgba(255, 255, 255, 0.9));
+  border: 1px solid var(--border-accent);
+  border-radius: 20px;
+  padding: 1.25rem 1.4rem;
+  box-shadow: var(--shadow-card);
+}
+.contactHero p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.75rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 9999px;
+  background: rgba(217, 4, 41, 0.1);
+  color: var(--accent-hover);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: "JetBrains Mono", "Fira Code", "Roboto Mono", monospace;
+}
+
+.contactCardsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+@media (max-width: 1023px) {
+  .contactCardsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contactCard {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+  border: 1px solid var(--border-dark);
+  padding: 1.1rem 1.2rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--shadow-card);
+}
+.contactCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(217, 4, 41, 0.12), transparent 62%);
+  pointer-events: none;
+}
+.contactCard:hover {
+  border-color: rgba(217, 4, 41, 0.4);
+  transform: translateY(-4px);
+  box-shadow: var(--glow-sm);
+}
+
+.contactCardWide {
+  grid-column: 1/-1;
+  justify-self: center;
+  max-width: 460px;
+  width: 100%;
+}
+
+.cardLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.95rem;
+  position: relative;
+  z-index: 1;
+}
+
+.iconBox {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: var(--accent-muted);
+  border: 1px solid rgba(217, 4, 41, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-hover);
+  flex-shrink: 0;
+}
+
+.label {
+  font-family: "JetBrains Mono", "Fira Code", "Roboto Mono", monospace;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.06em;
+}
+
+.value {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.copyBtn {
+  position: relative;
+  z-index: 1;
+  color: var(--text-muted);
+  padding: 0.55rem;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+.copyBtn:hover {
+  color: var(--accent-hover);
+  background: var(--accent-muted);
+}/*# sourceMappingURL=Contact.module.css.map */

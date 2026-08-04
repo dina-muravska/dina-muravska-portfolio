@@ -61,39 +61,6 @@ export const About: React.FC = () => {
                 applications with clean REST API integrations.
               </p>
             </div>
-
-            <div className={styles.infoCard}>
-              <div className={styles.cardTitle}>
-                <Globe size={18} />
-                <span>Quick Overview</span>
-              </div>
-              <div className={styles.quickDetails}>
-                <div className={styles.detailRow}>
-                  <span className={styles.label}>Location:</span>
-                  <span className={styles.value}>
-                    Ukraine (Remote Available)
-                  </span>
-                </div>
-                <div className={styles.detailRow}>
-                  <span className={styles.label}>Core Stack:</span>
-                  <span className={styles.value}>
-                    React 19, Next.js, TypeScript, SCSS Modules
-                  </span>
-                </div>
-                <div className={styles.detailRow}>
-                  <span className={styles.label}>State / Data:</span>
-                  <span className={styles.value}>
-                    Zustand, TanStack Query, Axios, Formik
-                  </span>
-                </div>
-                <div className={styles.detailRow}>
-                  <span className={styles.label}>Education:</span>
-                  <span className={styles.value}>
-                    IT School GoIT (Fullstack) & KNUTD (Design)
-                  </span>
-                </div>
-              </div>
-            </div>
           </motion.div>
 
           {/* Languages & Soft Skills */}

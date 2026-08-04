@@ -1,0 +1,149 @@
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 2.25rem;
+  flex-wrap: wrap;
+}
+
+.categoryTabs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tab {
+  font-family: "JetBrains Mono", "Fira Code", "Roboto Mono", monospace;
+  font-size: 0.85rem;
+  padding: 0.5rem 0.95rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-dark);
+  border-radius: 10px;
+  color: var(--text-secondary);
+  transition: all 0.15s ease;
+}
+.tab:hover {
+  color: var(--text-primary);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.tab.active {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.95rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-dark);
+  border-radius: 10px;
+  color: var(--text-primary);
+  min-width: 240px;
+}
+.searchBox input {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  width: 100%;
+}
+.searchBox input::-moz-placeholder {
+  color: var(--text-muted);
+}
+.searchBox input::placeholder {
+  color: var(--text-muted);
+}
+.searchBox .icon {
+  color: var(--text-muted);
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+@media (max-width: 639px) {
+  .categoriesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.categoryCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-dark);
+  padding: 1.75rem;
+  border-radius: 14px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--shadow-card);
+}
+.categoryCard:hover {
+  border-color: rgba(217, 4, 41, 0.4);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  transform: translateY(-3px);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-dark);
+}
+.cardHeader .categoryTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.cardHeader .countBadge {
+  font-family: "JetBrains Mono", "Fira Code", "Roboto Mono", monospace;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  background: var(--accent-muted);
+  color: var(--accent-hover);
+  border-radius: 9999px;
+}
+
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.skillItem {
+  font-size: 0.825rem;
+  font-weight: 500;
+  padding: 0.4rem 0.75rem;
+  background: #f1f5f9;
+  border: 1px solid var(--border-dark);
+  border-radius: 10px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all 0.15s ease;
+}
+.skillItem:hover {
+  color: var(--text-primary);
+  border-color: var(--border-light);
+  background: #e2e8f0;
+}
+.skillItem.isPrimary {
+  border-color: rgba(217, 4, 41, 0.4);
+  color: var(--accent-dark);
+  background: rgba(217, 4, 41, 0.12);
+  font-weight: 600;
+}
+.skillItem .star {
+  color: var(--accent-hover);
+}/*# sourceMappingURL=Skills.module.css.map */

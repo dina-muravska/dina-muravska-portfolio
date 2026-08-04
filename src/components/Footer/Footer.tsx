@@ -61,16 +61,7 @@ export const Footer: React.FC = () => {
             </div>
 
             <div className={styles.linkCol}>
-              <div className={styles.title}>Experience</div>
-              <a
-                href="#experience"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection("experience");
-                }}
-              >
-                Work History
-              </a>
+              <div className={styles.title}>Explore</div>
               <a
                 href="#education"
                 onClick={(e) => {

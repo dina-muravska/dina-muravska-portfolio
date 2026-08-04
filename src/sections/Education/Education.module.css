@@ -1,0 +1,75 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+}
+@media (max-width: 639px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-dark);
+  padding: 2.25rem;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--accent-primary);
+}
+.card:hover {
+  border-color: rgba(217, 4, 41, 0.4);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  transform: translateY(-3px);
+}
+
+.iconWrapper {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background: var(--accent-muted);
+  border: 1px solid rgba(217, 4, 41, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-hover);
+  margin-bottom: 1.25rem;
+}
+
+.institution {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.degree {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent-hover);
+  font-family: "JetBrains Mono", "Fira Code", "Roboto Mono", monospace;
+  margin-bottom: 1.25rem;
+}
+
+.period {
+  font-family: "JetBrains Mono", "Fira Code", "Roboto Mono", monospace;
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}/*# sourceMappingURL=Education.module.css.map */
