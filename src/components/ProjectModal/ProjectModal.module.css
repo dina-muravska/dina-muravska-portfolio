@@ -36,7 +36,7 @@
   top: 1.25rem;
   right: 1.25rem;
   color: var(--text-muted);
-  background: #f1f5f9;
+  background: var(--surface-subtle);
   border: 1px solid var(--border-dark);
   border-radius: 50%;
   width: 36px;
@@ -64,7 +64,7 @@
   font-family: "JetBrains Mono", "Fira Code", "Roboto Mono", monospace;
   font-size: 0.75rem;
   padding: 0.2rem 0.6rem;
-  background: #f1f5f9;
+  background: var(--surface-subtle);
   border: 1px solid var(--border-dark);
   border-radius: 9999px;
   color: var(--text-secondary);
@@ -134,7 +134,7 @@
   font-family: "JetBrains Mono", "Fira Code", "Roboto Mono", monospace;
   font-size: 0.775rem;
   padding: 0.25rem 0.65rem;
-  background: #f1f5f9;
+  background: var(--surface-subtle);
   border: 1px solid var(--border-dark);
   border-radius: 6px;
   color: var(--text-primary);
@@ -193,7 +193,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.7rem 1.15rem;
-  background: #f1f5f9;
+  background: var(--surface-subtle);
   border: 1px solid var(--border-dark);
   color: var(--text-primary);
   font-weight: 600;

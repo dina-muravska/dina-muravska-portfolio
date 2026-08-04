@@ -13,10 +13,7 @@ export const Footer: React.FC = () => {
             <div className={styles.logo}>
               Dina<span className={styles.accent}>.dev</span>
             </div>
-            <p className={styles.tagline}>
-              Full-Stack Developer building clean, responsive, and user-centered
-              web applications with React, Next.js, TypeScript & SCSS.
-            </p>
+            <p className={styles.tagline}>Full-Stack/Frontend Developer</p>
           </div>
 
           <div className={styles.linksGroup}>
@@ -127,10 +124,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className={styles.bottomRow}>
-          <div>
-            © {new Date().getFullYear()} Dina Muravska. Built with React 19,
-            TypeScript & SCSS Modules.
-          </div>
+          <div>© {new Date().getFullYear()} Dina Muravska</div>
 
           <button
             className={styles.backToTop}

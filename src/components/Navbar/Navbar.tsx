@@ -51,10 +51,6 @@ export const Navbar: React.FC<NavbarProps> = ({
             <span>
               Dina<span className={styles.accent}>.dev</span>
             </span>
-            <span className={styles.badge}>
-              <span className={styles.dot}></span>
-              Available
-            </span>
           </a>
 
           {/* Desktop Nav */}

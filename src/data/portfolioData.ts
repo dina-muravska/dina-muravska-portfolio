@@ -205,51 +205,61 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: "JavaScript (ES6+)", isPrimary: true },
       { name: "TypeScript", isPrimary: true },
-      { name: "HTML5", isPrimary: true },
-      { name: "CSS3 / SCSS", isPrimary: true },
     ],
   },
   {
-    category: "Frameworks & Libraries",
+    category: "Frontend Technologies",
     skills: [
+      { name: "HTML5", isPrimary: true },
+      { name: "CSS3", isPrimary: true },
+      { name: "SCSS/Sass", isPrimary: true },
       { name: "React", isPrimary: true },
       { name: "Next.js", isPrimary: true },
-      { name: "TanStack Query", isPrimary: false },
-      { name: "Zustand", isPrimary: false },
-      { name: "Formik & Yup", isPrimary: false },
+    ],
+  },
+  {
+    category: "Frontend Libraries & State Management",
+    skills: [
+      { name: "TanStack Query", isPrimary: true },
+      { name: "Zustand", isPrimary: true },
+      { name: "Formik", isPrimary: false },
+      { name: "Yup", isPrimary: false },
       { name: "Axios", isPrimary: false },
       { name: "Swiper.js", isPrimary: false },
       { name: "React Paginate", isPrimary: false },
     ],
   },
   {
-    category: "Tools & Technologies",
+    category: "Backend Technologies",
     skills: [
-      { name: "Vite", isPrimary: true },
-      { name: "Git & GitHub", isPrimary: true },
+      { name: "Node.js", isPrimary: true },
+      { name: "Express.js", isPrimary: true },
+      { name: "REST API", isPrimary: true },
+      { name: "MongoDB", isPrimary: false },
+      { name: "Mongoose", isPrimary: false },
+    ],
+  },
+  {
+    category: "Backend Libraries & Utilities",
+    skills: [
+      { name: "bcrypt", isPrimary: false },
+      { name: "Multer", isPrimary: false },
+      { name: "Celebrate", isPrimary: false },
+      { name: "Cloudinary", isPrimary: false },
+      { name: "Handlebars", isPrimary: false },
+    ],
+  },
+  {
+    category: "Development Tools & Platforms",
+    skills: [
+      { name: "Git", isPrimary: true },
+      { name: "GitHub", isPrimary: true },
       { name: "GitHub Projects", isPrimary: false },
-      { name: "REST API Integration", isPrimary: true },
-      { name: "Postman", isPrimary: false },
-      { name: "Vercel", isPrimary: false },
       { name: "VS Code", isPrimary: false },
-    ],
-  },
-  {
-    category: "Markup & Styling",
-    skills: [
-      { name: "SCSS / Sass Modules", isPrimary: true },
-      { name: "CSS Grid & Flexbox", isPrimary: true },
-      { name: "Responsive Design", isPrimary: true },
-      { name: "Adaptive Breakpoints", isPrimary: false },
-    ],
-  },
-  {
-    category: "Soft Skills",
-    skills: [
-      { name: "Teamwork & Collaboration" },
-      { name: "Self-management & Ownership" },
-      { name: "Task Prioritization" },
-      { name: "Continuous Desire to Learn" },
+      { name: "Postman", isPrimary: false },
+      { name: "Vite", isPrimary: false },
+      { name: "Vercel", isPrimary: false },
+      { name: "Render", isPrimary: false },
     ],
   },
 ];
@@ -276,7 +286,7 @@ export const workExperience: WorkExperience[] = [
 export const educationData: EducationItem[] = [
   {
     institution: "IT School GoIT",
-    degree: "Fullstack Developer",
+    degree: "Full-Stack Developer Certificate",
     period: "08/2025 - 06/2026",
   },
   {
@@ -288,16 +298,16 @@ export const educationData: EducationItem[] = [
 
 export const certificationsData: Certification[] = [
   {
-    title: "Fullstack Developer",
+    title: "Full-Stack Developer Certificate",
     issuer: "IT School GoIT",
     date: "June 2026",
-    badge: "Diploma",
+    badge: "Certificate",
   },
   {
     title: "Google AI Professional Certificate",
     issuer: "Google (Coursera)",
     date: "May 2026",
-    badge: "Professional Cert",
+    badge: "Professional Certificate",
   },
   {
     title: "Vibe Coding with Claude Code",

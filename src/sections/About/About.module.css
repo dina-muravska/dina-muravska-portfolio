@@ -1,20 +1,14 @@
-.aboutGrid {
+.skillsGrid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 2.5rem;
-  align-items: start;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 2rem;
 }
 @media (max-width: 1023px) {
-  .aboutGrid {
+  .skillsGrid {
     grid-template-columns: 1fr;
-    gap: 2rem;
   }
-}
-
-.leftContent {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
 }
 
 .textCard {
@@ -36,12 +30,6 @@
 .textCard .highlight {
   color: var(--text-primary);
   font-weight: 700;
-}
-
-.rightContent {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
 }
 
 .infoCard {
@@ -79,7 +67,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.65rem 1rem;
-  background: #f1f5f9;
+  background: var(--surface-subtle);
   border: 1px solid var(--border-dark);
   border-radius: 10px;
 }
@@ -106,7 +94,7 @@
   font-size: 0.85rem;
   font-weight: 500;
   padding: 0.45rem 0.85rem;
-  background: #f1f5f9;
+  background: var(--surface-subtle);
   border: 1px solid var(--border-dark);
   border-radius: 10px;
   color: var(--text-primary);

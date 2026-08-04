@@ -21,11 +21,6 @@ export const Hero: React.FC<HeroProps> = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className={styles.badge}>
-              <span className={styles.dot}></span>
-              <span>{personalDetails.status}</span>
-            </div>
-
             <h1 className={styles.title}>
               Hello, I'm <br />
               <span className={styles.accent}>{personalDetails.name}</span>
@@ -103,38 +98,9 @@ export const Hero: React.FC<HeroProps> = () => {
                 className={styles.profileImg}
                 referrerPolicy="no-referrer"
               />
-              <div className={styles.imageOverlayBadge}>
-                <span className={styles.badgeDot}></span>
-                <span>Full-Stack Software Engineer</span>
-              </div>
             </div>
           </motion.div>
         </div>
-
-        {/* Highlight Stats Bar */}
-        <motion.div
-          className={styles.statsBar}
-          initial={{ opacity: 0, y: 25 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.35 }}
-        >
-          <div className={styles.statItem}>
-            <span className={styles.number}>5+</span>
-            <span className={styles.text}>Featured Projects</span>
-          </div>
-          <div className={styles.statItem}>
-            <span className={styles.number}>100%</span>
-            <span className={styles.text}>Responsive SCSS & CSS Grid</span>
-          </div>
-          <div className={styles.statItem}>
-            <span className={styles.number}>React 19</span>
-            <span className={styles.text}>TypeScript & Next.js Stack</span>
-          </div>
-          <div className={styles.statItem}>
-            <span className={styles.number}>200+</span>
-            <span className={styles.text}>Client Operations Handled</span>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

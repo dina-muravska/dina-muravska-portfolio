@@ -77,28 +77,13 @@ export const Contact: React.FC<ContactProps> = ({ onCopyNotice }) => {
           <span className="subtitle">07. Get In Touch</span>
           <h2 className="title">Let's Work Together</h2>
           <p className="description">
-            Open for full-time full-stack developer roles, project
+            Open for full-time full-stack/frontend developer roles, project
             collaborations, and technical discussions. Feel free to reach out
             through any of the contact options below.
           </p>
         </div>
 
         <div className={styles.contactShell}>
-          <motion.div
-            className={styles.contactHero}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.45 }}
-          >
-            <div className={styles.heroBadge}>Available for collaboration</div>
-            <p>
-              Whether it is a product launch, a freelance project, or a
-              thoughtful conversation about modern web work, I am always happy
-              to connect.
-            </p>
-          </motion.div>
-
           <div className={styles.contactCardsGrid}>
             {contactItems.map((item, index) => {
               const Icon = item.icon;

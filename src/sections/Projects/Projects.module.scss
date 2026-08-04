@@ -1,5 +1,5 @@
-@import '../../styles/variables';
-@import '../../styles/mixins';
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 .filterTabs {
   display: flex;
@@ -13,7 +13,7 @@
   font-family: $font-mono;
   font-size: 0.85rem;
   padding: 0.55rem 1.25rem;
-  background: $bg-card;
+  background: var(--surface-elevated);
   border: 1px solid $border-dark;
   border-radius: $radius-md;
   color: $text-secondary;
@@ -21,7 +21,7 @@
 
   &:hover {
     color: $text-primary;
-    border-color: rgba(255, 255, 255, 0.2);
+    border-color: var(--accent-border);
   }
 
   &.active {
@@ -51,12 +51,12 @@
   flex-direction: column;
   transition: all $transition-base;
   position: relative;
-  box-shadow: $shadow-card;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.05);
 
   &:hover {
     border-color: rgba(217, 4, 41, 0.5);
-    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1), $glow-sm;
-    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+    transform: translateY(-3px);
 
     .projectImage {
       transform: scale(1.04);
@@ -69,8 +69,9 @@
   height: 210px;
   position: relative;
   overflow: hidden;
-  background: #e2e8f0;
+  background: var(--surface-strong);
   border-bottom: 1px solid $border-dark;
+  box-shadow: inset 0 -1px 0 rgba(15, 23, 42, 0.04);
 }
 
 .projectImage {
@@ -79,47 +80,6 @@
   object-fit: cover;
   object-position: top center;
   transition: transform $transition-slow;
-}
-
-.imageOverlay {
-  position: absolute;
-  inset: 0;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: linear-gradient(180deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 50%, rgba(241,243,247,0.85) 100%);
-  pointer-events: none;
-}
-
-.topBadges {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.categoryBadge {
-  font-family: $font-mono;
-  font-size: 0.725rem;
-  padding: 0.2rem 0.6rem;
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid $border-dark;
-  border-radius: $radius-sm;
-  color: $text-secondary;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.05);
-}
-
-.featuredBadge {
-  font-family: $font-mono;
-  font-size: 0.7rem;
-  padding: 0.2rem 0.6rem;
-  background: $accent-primary;
-  color: #ffffff;
-  border-radius: $radius-sm;
-  font-weight: 700;
-  text-transform: uppercase;
 }
 
 .cardBody {
@@ -176,8 +136,8 @@
   font-family: $font-mono;
   font-size: 0.725rem;
   padding: 0.2rem 0.55rem;
-  background: #f1f5f9;
-  border: 1px solid #e2e8f0;
+  background: var(--surface-subtle);
+  border: 1px solid $border-dark;
   border-radius: $radius-sm;
   color: $text-secondary;
 }
@@ -221,7 +181,7 @@
   align-items: center;
   gap: 0.35rem;
   padding: 0.45rem 0.85rem;
-  background: #f1f5f9;
+  background: var(--surface-subtle);
   border: 1px solid $border-dark;
   color: $text-primary;
   font-family: $font-mono;
@@ -231,8 +191,8 @@
   transition: all $transition-fast;
 
   &:hover {
-    border-color: rgba(217, 4, 41, 0.4);
-    background: #e2e8f0;
+    border-color: var(--accent-border);
+    background: var(--surface-strong);
     color: $accent-dark;
   }
 }
@@ -245,10 +205,15 @@
   font-size: 0.8rem;
   font-weight: 600;
   color: $text-secondary;
+  padding: 0.45rem 0.8rem;
+  border-radius: $radius-md;
+  background: var(--accent-muted);
+  border: 1px solid var(--accent-border);
   transition: all $transition-fast;
 
   &:hover {
     color: $accent-hover;
     gap: 0.5rem;
+    background: rgba(217, 4, 41, 0.16);
   }
 }

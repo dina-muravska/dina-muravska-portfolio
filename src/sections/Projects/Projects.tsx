@@ -1,26 +1,28 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { ExternalLink, Github, ArrowRight, Layers } from 'lucide-react';
-import { projectsData } from '../../data/portfolioData';
-import { Project } from '../../types';
-import styles from './Projects.module.scss';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { ExternalLink, Github, ArrowRight, Layers } from "lucide-react";
+import { projectsData } from "../../data/portfolioData";
+import { Project } from "../../types";
+import styles from "./Projects.module.scss";
 
 interface ProjectsProps {
   onSelectProject: (project: Project) => void;
 }
 
 export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
-  const [filter, setFilter] = useState<'all' | 'fullstack' | 'frontend' | 'landing'>('all');
+  const [filter, setFilter] = useState<
+    "all" | "fullstack" | "frontend" | "landing"
+  >("all");
 
   const categories = [
-    { id: 'all', label: 'All Projects' },
-    { id: 'fullstack', label: 'Full-Stack' },
-    { id: 'frontend', label: 'Frontend' },
-    { id: 'landing', label: 'Landing Pages' },
+    { id: "all", label: "All Projects" },
+    { id: "fullstack", label: "Full-Stack" },
+    { id: "frontend", label: "Frontend" },
+    { id: "landing", label: "Landing Pages" },
   ];
 
   const filteredProjects = projectsData.filter(
-    (p) => filter === 'all' || p.category === filter
+    (p) => filter === "all" || p.category === filter,
   );
 
   return (
@@ -30,7 +32,8 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
           <span className="subtitle">01. Primary Focus</span>
           <h2 className="title">Featured Projects</h2>
           <p className="description">
-            Production-ready web applications built with React, Next.js, TypeScript, REST APIs, and responsive SCSS styling.
+            Production-ready web applications built with React, Next.js,
+            TypeScript, REST APIs, and responsive SCSS styling.
           </p>
         </div>
 
@@ -39,7 +42,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
           {categories.map((cat) => (
             <button
               key={cat.id}
-              className={`${styles.filterBtn} ${filter === cat.id ? styles.active : ''}`}
+              className={`${styles.filterBtn} ${filter === cat.id ? styles.active : ""}`}
               onClick={() => setFilter(cat.id as any)}
             >
               {cat.label}
@@ -69,17 +72,9 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                     referrerPolicy="no-referrer"
                     onError={(e) => {
                       // Fallback if image fails
-                      (e.target as HTMLElement).style.display = 'none';
+                      (e.target as HTMLElement).style.display = "none";
                     }}
                   />
-                  <div className={styles.imageOverlay}>
-                    <div className={styles.topBadges}>
-                      <span className={styles.categoryBadge}>{project.category}</span>
-                      {project.featured && (
-                        <span className={styles.featuredBadge}>Featured</span>
-                      )}
-                    </div>
-                  </div>
                 </div>
 
                 {/* Card Content Body */}
@@ -91,7 +86,9 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
 
                   <div className={styles.roleSub}>{project.role}</div>
 
-                  <p className={styles.description}>{project.shortDescription}</p>
+                  <p className={styles.description}>
+                    {project.shortDescription}
+                  </p>
 
                   {/* Technology Pills */}
                   <div className={styles.techPills}>

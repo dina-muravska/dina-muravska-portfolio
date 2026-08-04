@@ -1,5 +1,5 @@
-@import '../../styles/variables';
-@import '../../styles/mixins';
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 .backdrop {
   position: fixed;
@@ -38,7 +38,7 @@
   top: 1.25rem;
   right: 1.25rem;
   color: $text-muted;
-  background: #f1f5f9;
+  background: var(--surface-subtle);
   border: 1px solid $border-dark;
   border-radius: 50%;
   width: 36px;
@@ -67,7 +67,7 @@
   font-family: $font-mono;
   font-size: 0.75rem;
   padding: 0.2rem 0.6rem;
-  background: #f1f5f9;
+  background: var(--surface-subtle);
   border: 1px solid $border-dark;
   border-radius: $radius-full;
   color: $text-secondary;
@@ -136,7 +136,7 @@
   font-family: $font-mono;
   font-size: 0.775rem;
   padding: 0.25rem 0.65rem;
-  background: #f1f5f9;
+  background: var(--surface-subtle);
   border: 1px solid $border-dark;
   border-radius: $radius-sm;
   color: $text-primary;
@@ -197,7 +197,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.7rem 1.15rem;
-  background: #f1f5f9;
+  background: var(--surface-subtle);
   border: 1px solid $border-dark;
   color: $text-primary;
   font-weight: 600;

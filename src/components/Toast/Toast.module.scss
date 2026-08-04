@@ -1,5 +1,5 @@
-@import '../../styles/variables';
-@import '../../styles/mixins';
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 .toast {
   position: fixed;
@@ -10,7 +10,7 @@
   align-items: center;
   gap: 0.75rem;
   padding: 0.85rem 1.25rem;
-  background: #ffffff;
+  background: var(--surface-elevated);
   border: 1px solid rgba(217, 4, 41, 0.3);
   border-radius: $radius-md;
   box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);

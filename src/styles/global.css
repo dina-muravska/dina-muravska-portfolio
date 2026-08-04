@@ -41,6 +41,7 @@ html {
     0 8px 24px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.04);
   --surface-muted: #f8fafc;
   --surface-strong: #eef2f7;
+  --header-scrolled-bg: rgba(241, 243, 247, 0.92);
 }
 
 html[data-theme=dark] {
@@ -71,6 +72,12 @@ html[data-theme=dark] {
   --shadow-card: 0 16px 40px rgba(0, 0, 0, 0.34), 0 2px 8px rgba(0, 0, 0, 0.25);
   --surface-muted: #172132;
   --surface-strong: #101722;
+  --surface-subtle: #172132;
+  --surface-elevated: #121821;
+  --header-scrolled-bg: rgba(9, 13, 20, 0.94);
+  --footer-bg: #090d14;
+  --footer-text: #f7f8fb;
+  --footer-muted: #8b94a7;
 }
 
 body {

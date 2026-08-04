@@ -1,35 +1,5 @@
 .contactShell {
   display: grid;
-  gap: 1.5rem;
-}
-
-.contactHero {
-  background: linear-gradient(135deg, rgba(217, 4, 41, 0.08), rgba(255, 255, 255, 0.9));
-  border: 1px solid var(--border-accent);
-  border-radius: 20px;
-  padding: 1.25rem 1.4rem;
-  box-shadow: var(--shadow-card);
-}
-.contactHero p {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  line-height: 1.7;
-}
-
-.heroBadge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  margin-bottom: 0.75rem;
-  padding: 0.4rem 0.7rem;
-  border-radius: 9999px;
-  background: rgba(217, 4, 41, 0.1);
-  color: var(--accent-hover);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-family: "JetBrains Mono", "Fira Code", "Roboto Mono", monospace;
 }
 
 .contactCardsGrid {
