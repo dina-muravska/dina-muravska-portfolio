@@ -17,6 +17,7 @@
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid $border-dark;
     box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+    --navbar-text: var(--navbar-text-scrolled);
   }
 }
 
@@ -33,7 +34,7 @@
   font-family: $font-mono;
   font-weight: 700;
   font-size: 1.2rem;
-  color: $text-primary;
+  color: var(--navbar-text);
   transition: transform $transition-fast;
 
   &:hover {
@@ -94,7 +95,7 @@
 .navLink {
   font-size: 0.875rem;
   font-weight: 500;
-  color: $text-secondary;
+  color: var(--navbar-text);
   transition: color $transition-fast;
   position: relative;
   padding: 0.25rem 0;
@@ -133,7 +134,7 @@
   width: 2.35rem;
   height: 2.35rem;
   border-radius: $radius-full;
-  color: $text-secondary;
+  color: var(--navbar-text);
   background: rgba(217, 4, 41, 0.08);
   border: 1px solid rgba(217, 4, 41, 0.2);
   transition: all $transition-base;
@@ -171,7 +172,7 @@
 
 .mobileToggle {
   display: none;
-  color: $text-primary;
+  color: var(--navbar-text);
   padding: 0.5rem;
 
   @include tablet {
@@ -207,7 +208,7 @@
   .mobileNavLink {
     font-size: 1.35rem;
     font-weight: 600;
-    color: $text-secondary;
+    color: var(--navbar-text);
     transition: color $transition-fast;
 
     &:hover,

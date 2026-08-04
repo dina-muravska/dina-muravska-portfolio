@@ -35,6 +35,8 @@ html {
   --text-primary: #0f172a;
   --text-secondary: #475569;
   --text-muted: #64748b;
+  --navbar-text: #f7f8fb;
+  --navbar-text-scrolled: #0f172a;
   --border-dark: #e2e8f0;
   --border-light: #cbd5e1;
   --border-accent: #d90429;
@@ -67,6 +69,8 @@ html[data-theme="dark"] {
   --text-primary: #f7f8fb;
   --text-secondary: #c3cde0;
   --text-muted: #8b94a7;
+  --navbar-text: #f7f8fb;
+  --navbar-text-scrolled: #f7f8fb;
   --border-dark: #233043;
   --border-light: #2d3a4d;
   --border-accent: #ff4d6d;

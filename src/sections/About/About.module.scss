@@ -1,16 +1,41 @@
 @import "../../styles/variables";
 @import "../../styles/mixins";
 
-.skillsGrid {
+.aboutGrid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1.3fr 0.7fr;
   gap: 1.5rem;
   width: 100%;
   margin-top: 2rem;
+  align-items: stretch;
 
   @include tablet {
     grid-template-columns: 1fr;
   }
+}
+
+.summaryCard,
+.infoCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.summaryCard {
+  background: $bg-card;
+  border: 1px solid $border-dark;
+  padding: 2rem;
+  border-radius: $radius-lg;
+  line-height: 1.75;
+  color: $text-secondary;
+  box-shadow: $shadow-card;
+}
+
+.description {
+  margin: 0;
+  color: $text-secondary;
+  font-size: 1rem;
+  line-height: 1.75;
 }
 
 .textCard {

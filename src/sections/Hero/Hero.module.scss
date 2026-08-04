@@ -9,6 +9,47 @@
   padding-top: 7rem;
   padding-bottom: 4rem;
   overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    #760b16 0%,
+    #49030e 26%,
+    #1e0709 50%,
+    #050203 78%,
+    #020202 100%
+  );
+  color: #ffffff;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(
+        circle at top left,
+        rgba(255, 255, 255, 0.08),
+        transparent 18%
+      ),
+      radial-gradient(
+        circle at 40% 20%,
+        rgba(217, 4, 41, 0.28),
+        transparent 20%
+      );
+    opacity: 0.9;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(45deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 32px 32px;
+    opacity: 0.72;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+  }
 }
 
 .grid {
@@ -66,7 +107,8 @@
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.03em;
-  color: $text-primary;
+  color: #ffffff;
+  text-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
   margin-bottom: 0.75rem;
 
   @include tablet {
@@ -96,7 +138,7 @@
 
 .description {
   font-size: 1.05rem;
-  color: $text-secondary;
+  color: rgba(255, 255, 255, 0.92);
   line-height: 1.65;
   max-width: 540px;
   margin-bottom: 2rem;
@@ -230,20 +272,6 @@
   overflow: hidden;
   transition: all $transition-base;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 86% 100%, 0 100%);
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 2px;
-    background: radial-gradient(
-      circle at top left,
-      rgba(255, 255, 255, 0.22),
-      transparent 32%
-    );
-    pointer-events: none;
-  }
 
   &::after {
     content: "";
