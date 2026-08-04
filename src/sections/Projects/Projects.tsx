@@ -30,10 +30,10 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
       <div className="container">
         <div className="section-title-wrapper">
           <span className="subtitle">01. Primary Focus</span>
-          <h2 className="title">Featured Projects</h2>
+          <h2 className="title">Projects</h2>
           <p className="description">
             Production-ready web applications built with React, Next.js,
-            TypeScript, REST APIs, and responsive SCSS styling.
+            TypeScript, REST APIs, and responsive CSS styling.
           </p>
         </div>
 
