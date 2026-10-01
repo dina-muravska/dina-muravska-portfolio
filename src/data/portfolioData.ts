@@ -349,6 +349,18 @@ export const certificationsData: Certification[] = [
     badge: "Certificate",
   },
   {
+    title: "Vibe Coding with Cursor AI",
+    issuer: "Scrimba",
+    date: "Sep 2026",
+    badge: "Certificate",
+  },
+  {
+    title: "Vibe Coding with GitHub Copilot",
+    issuer: "Scrimba",
+    date: "Sep 2026",
+    badge: "Certificate",
+  },
+  {
     title: "Claude AI Comprehensive Guide",
     issuer: "SkillsBooster Academy",
     date: "July 2026",
