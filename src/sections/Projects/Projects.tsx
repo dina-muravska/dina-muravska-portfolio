@@ -67,7 +67,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                 <div className={styles.imageContainer}>
                   <img
                     src={project.image}
-                    alt={`${project.title} screenshot`}
+                    alt={project.imageAlt ?? `${project.title} screenshot`}
                     className={styles.projectImage}
                     referrerPolicy="no-referrer"
                     onError={(e) => {

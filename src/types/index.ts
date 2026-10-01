@@ -10,9 +10,10 @@ export interface Project {
   liveDemoUrl?: string;
   githubFrontendUrl?: string;
   githubBackendUrl?: string;
-  category: 'fullstack' | 'frontend' | 'landing';
+  category: "fullstack" | "frontend" | "landing";
   featured: boolean;
   image: string; // Path to project screenshot placeholder
+  imageAlt?: string;
   imageBg: string; // Gradient / accent motif for visual aesthetic
 }
 

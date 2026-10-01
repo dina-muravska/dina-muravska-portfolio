@@ -38,6 +38,39 @@ export const contactInfo: ContactInfo = {
 
 export const projectsData: Project[] = [
   {
+    id: "read-journey",
+    title: "Read Journey",
+    year: "2026",
+    shortDescription:
+      "A reading tracker and digital book collection for discovering books, setting reading goals, and tracking progress.",
+    fullDescription:
+      "Read Journey is a web application for tracking personal reading activity and managing a digital book collection. Users can discover recommended books, search and filter books by title or author, manage their personal library, set reading goals, and track reading progress.",
+    techStack: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "TanStack Query",
+      "Yup",
+      "Axios",
+      "CSS Modules",
+      "iziToast / React Hot Toast",
+    ],
+    role: "role: Frontend Developer",
+    keyContributions: [
+      "Built book discovery, search, and filtering experiences for browsing by title or author.",
+      "Implemented personal library management and reading goal tracking.",
+      "Created reading progress features with responsive interfaces for different screen sizes.",
+    ],
+    liveDemoUrl: "https://read-journey-tau-five.vercel.app/",
+    githubFrontendUrl: "https://github.com/dina-muravska/read-journey",
+    category: "frontend",
+    featured: true,
+    image: "/images/projects/read-jorney.jpg",
+    imageAlt: "Read Journey",
+    imageBg:
+      "linear-gradient(135deg, rgba(193, 18, 31, 0.15) 0%, rgba(15, 15, 15, 0.95) 100%)",
+  },
+  {
     id: "tasteorama",
     title: "Tasteorama",
     year: "2026",
@@ -111,9 +144,9 @@ export const projectsData: Project[] = [
     title: "NoteHub",
     year: "2026",
     shortDescription:
-      "Full-stack note management app for creating, editing, categorizing, and organizing personal thoughts and tasks securely.",
+      "Frontend note management app for creating, editing, categorizing, and organizing personal notes with a responsive interface.",
     fullDescription:
-      "NoteHub is a productivity tool designed for fast note-taking. Users can register, log in, manage personal notes with Markdown support, filter by tags, and paginate through historical entries.",
+      "NoteHub is a responsive note-taking productivity app. Its frontend lets users access authentication views, manage personal notes with Markdown support, filter notes by tags, and browse paginated entries.",
     techStack: [
       "React",
       "Next.js",
@@ -129,11 +162,11 @@ export const projectsData: Project[] = [
       "Built clean user interface components for creating, editing, and deleting notes.",
       "Implemented secure cookie-based session handling and authentication views.",
       "Designed responsive grid layouts with custom pagination using React Paginate.",
-      "Optimized backend API interactions using TanStack Query mutation hooks.",
+      "Integrated note-related API requests with TanStack Query mutation hooks.",
     ],
     liveDemoUrl: "https://note-hub-rho.vercel.app/",
     githubFrontendUrl: "https://github.com/dina-muravska/NoteHub",
-    category: "fullstack",
+    category: "frontend",
     featured: true,
     image: "/images/projects/notehub.jpg",
     imageBg:
