@@ -71,6 +71,29 @@ export const projectsData: Project[] = [
       "linear-gradient(135deg, rgba(193, 18, 31, 0.15) 0%, rgba(15, 15, 15, 0.95) 100%)",
   },
   {
+    id: "kospo-systems",
+    title: "KOSPO Systems",
+    year: "2026",
+    shortDescription:
+      "Developed the frontend and backend for this commercial client project.",
+    fullDescription:
+      "KOSPO Systems is a commercial client project for which I designed the landing page and developed both the responsive frontend and backend.",
+    techStack: ["HTML5", "CSS3", "TypeScript", "React", "Node.js", "SCSS/Sass"],
+    role: "Commercial Project",
+    keyContributions: [
+      "Designed the landing page to present KOSPO Systems and its services.",
+      "Developed the responsive frontend using React, TypeScript, HTML5, and CSS3/SCSS.",
+      "Built the backend with Node.js.",
+    ],
+    liveDemoUrl: "https://www.kosposystems.com/#top",
+    category: "fullstack",
+    featured: true,
+    image: "/images/projects/KOSPO.jpg",
+    imageAlt: "KOSPO Systems website preview",
+    imageBg:
+      "linear-gradient(135deg, rgba(193, 18, 31, 0.18) 0%, rgba(15, 15, 15, 0.95) 100%)",
+  },
+  {
     id: "tasteorama",
     title: "Tasteorama",
     year: "2026",
